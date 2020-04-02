@@ -70,7 +70,7 @@ select {
 }
 			
 #buildMaker {
-	width: 500px;
+	width: 600px;
 	margin: auto;
 	padding: 15 20px;
 	margin-bottom: 20px;
@@ -648,99 +648,93 @@ select {
 		</div>
 		<div id="second">
 			<div id="buildMaker">
-				<table>
+				<table style="width: 100%;" border="0">
 					<caption>Construtor de PC's</caption>
 					<form id="buildForm">
 						<tr>
 							<td>
-								Orçamento
-							</td>
-							<td>
-								<input required name="budget1"></input>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								Orçamento Reservado
-							</td>
-							<td>
-								<input name="resbudget1" placeholder="400"></input>
+								<div class="form-group">
+									<label for="budget1"><b>Orçamento</b></label>
+									<input required name="budget1" id="budget1" type="number" class="form-control">
+								</div>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								Pontuação
-							</td>
-							<td>
-								<input required name="score1"></input>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								Compensação para a Pontuação
-							</td>
-							<td>
-								<input name="offset1" placeholder="200"></input>
+								<div class="form-group">
+									<label for="resbudget1"><b>Orçamento Reservado</b></label>
+									<input required name="resbudget1" id="resbudget1" placeholder="400" type="number" class="form-control">
+								</div>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								Nível
-							</td>
-							<td>
-								<input required name="level1"></input>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								Número de Resultados
-							</td>
-							<td>
-								<input name="results1" placeholder="10"></input>
+								<div class="form-group">
+									<label for="score1"><b>Pontuação</b></label>
+									<input required name="score1" id="score1" type="number" class="form-control">
+								</div>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								Arquitetura do PC
-							</td>
-							<td>
-								<select name="architecture1">
-									<option selected>Any</option>
-									<option value="skylake">Skylake</option>
-									<option value="kabylake">Kabylake</option>
-									<option value="coffeelake">Coffeelake</option>
-									<option value="xseries">X-Series</option>
-									<option value="ryzen">RYZEN</option>
-									<option value="threadripper">Threadripper</option>
-								</select>
+								<div class="form-group">
+									<label for="offset1"><b>Compensação para a Pontuação</b></label>
+									<input required name="offset1" id="offset1" placeholder="200" type="number" class="form-control">
+								</div>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								Incluir Placa-Mãe?
-							</td>
-							<td>
-								<input type="checkbox" name="incmobo1"></input>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								Incluir RAM?
-							</td>
-							<td>
-								<input type="checkbox" name="incram1"></input>
+								<div class="form-group">
+									<label for="level1"><b>Nível</b></label>
+									<input required name="level1" id="level1" type="number" class="form-control">
+								</div>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								Precisa de Overclock?
-							</td>
-							<td>
-								<input type="checkbox" name="needoc1"></input>
+								<div class="form-group">
+									<label for="results1"><b>Número de Resultados</b></label>
+									<input required name="results1" id="results1" placeholder="10" type="number" class="form-control">
+								</div>
 							</td>
 						</tr>
 						<tr>
-							<td><button type="button" onclick="generateBuild()">Calcular</button></td>
+							<td>
+								<div class="form-group">
+									<label for="architecture1"><b>Arquitetura do PC</b></label>
+									<select name="architecture1" class="custom-select">
+										<option selected>Qualquer</option>
+										<option value="skylake">Skylake</option>
+										<option value="kabylake">Kabylake</option>
+										<option value="coffeelake">Coffeelake</option>
+										<option value="xseries">X-Series</option>
+										<option value="ryzen">RYZEN</option>
+										<option value="threadripper">Threadripper</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="incmobo1" ><b>Incluir Placa-Mãe?</b></label><br/>
+								<input type="checkbox" style="width: 50px;" id="incmobo1" name="incmobo1"></input>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="incram1" ><b>Incluir RAM?</b></label><br/>
+								<input type="checkbox" style="width: 50px;" id="incram1" name="incram1"></input>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="needoc1" ><b>Precisa de Overclock?</b></label><br/>
+								<input type="checkbox" style="width: 50px;" id="needoc1" name="needoc1"></input>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top: 25px;;"><button type="button" style="width: 250px;" class="btn btn-success" onclick="generateBuild()">Calcular</button></td>
 						</tr>
 					</form>
 				</table>
