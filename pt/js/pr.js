@@ -7,11 +7,7 @@ var cpuDataEvent = new Event("cpuDataReceived");
 var gpuDataEvent = new Event("gpuDataReceived");
 
 $(document).on("cpuDataReceived", function() {
-<<<<<<< HEAD
-    console.log("CPU data received!");
-=======
     console.log("Dados da CPU recebidos!");
->>>>>>> upstream/master
     cpuData.sort(function(a, b) {
     if (parseInt(a["Actual Score (No Overclock)"]) < parseInt(b["Actual Score (No Overclock)"])) {
         return 1;
@@ -41,11 +37,7 @@ createCpuChart();
 });
 
 $(document).on("gpuDataReceived", function() {
-<<<<<<< HEAD
-    console.log("GPU data received!");
-=======
     console.log("Dados da GPU recebidos!");
->>>>>>> upstream/master
     gpuData.sort(function(a, b) {
         if (parseInt(a["Actual Score (Single)"]) < parseInt(b["Actual Score (Single)"])) {
             return 1;
