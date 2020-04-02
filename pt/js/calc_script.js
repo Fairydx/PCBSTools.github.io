@@ -75,11 +75,19 @@ function showThisCal(idToShow, hide1, hide2, hide3) {
 				var gpu = document.getElementById('scoreCForm').gpu1.value
 				var slicf = document.getElementById('scoreCForm').slicf1.value
 				if (!data.procs[cpu] || data.procs[cpu][ramc][rams] == "") {
+<<<<<<< HEAD
 					alert("CPU not found!")
 				} else if (!data.gpus[gpu]) {
 					alert("GPU not found!")
 				} else if (!data.gpus[gpu][slicf]) {
 					alert("Selected GPU is not supported for SLI/CrossFire!")
+=======
+					alert("CPU não encontrado!")
+				} else if (!data.gpus[gpu]) {
+					alert("GPU não encontrado!")
+				} else if (!data.gpus[gpu][slicf]) {
+					alert("A GPU selecionada não é suportada para SLI / CrossFire!")
+>>>>>>> upstream/master
 				} else {
 					var score = getScore(data.procs[cpu][ramc][rams], data.gpus[gpu][slicf].score)
 					var wattage = getWattage(data.gpus[gpu][slicf].wattage, data.procs[cpu].wattage, 50)
@@ -127,7 +135,11 @@ function showThisCal(idToShow, hide1, hide2, hide3) {
 					showSaver(document.getElementById('saveBuildBackground'))
 					temp = this.id
 				}
+<<<<<<< HEAD
 				var text = document.createTextNode('Save')
+=======
+				var text = document.createTextNode('Gravar')
+>>>>>>> upstream/master
 				button.append(text)
 				target.append(button)
 			}
@@ -365,7 +377,11 @@ function showThisCal(idToShow, hide1, hide2, hide3) {
 				}
 				var currentScore = getScore(data.procs[currentProc][currentRamChannel][currentRamSpeed], data.gpus[currentGpu][currentSlicf].score)
 				if (currentScore > score) {
+<<<<<<< HEAD
 					alert("No upgrade required!")
+=======
+					alert("Não é necessário actualizar!")
+>>>>>>> upstream/master
 					return false
 				}
 				for (cpu in data.procs) {
